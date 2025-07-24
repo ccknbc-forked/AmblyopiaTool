@@ -47,7 +47,8 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a title="网站盲人通道" href="javascript:;" class="navbar-brand brand wzayd" accesskey="g" onclick="ShowDetail()" onmousedown="ShowDetail()"><i class="fa  icon-wza " aria-hidden="true"></i>盲人通道</a>
+                        <a id="wzayd"  title="网站盲人通道" href="javascript:;" class="navbar-brand brand wzayd" accesskey="g" ><i class="fa  icon-wza " aria-hidden="true"></i>盲人通道</a>
+                        <a id="wzaElder" title="网站适老化模式" class="navbar-brand brand wzaElder" href="javascript:;" accesskey="o"><i class="fa  icon-elder" aria-hidden="true"></i>适老模式</a>
                     </div>
                     <div id="navbar-collapse-02" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -55,7 +56,7 @@
                             <li class="active"><a class="scroll" title="非文本对象演示页面" href="index2.html">非文本对象</a></li>
                             <li><a class="scroll" title="表单朗读演示页面" href="index3.html">表单朗读</a></li>
                             <li><a class="scroll" title="栏目跳转演示页面" href="index4.html">栏目跳转</a></li>
-                            <li><a class="scroll" title="区域跳转演示页面" href="index5.html">区域跳转</a></li>
+                            <li><a class="scroll" title="英文版演示演示页面" href="index5.html">英文版演示</a></li>
                             <li><a class="scroll" title="无障碍工具条下载部署" href="index6.html">下载安装</a></li>
                         </ul>
                     </div>
@@ -116,19 +117,6 @@
     <!--=== Load JS here for cdn ====-->
     <script type="text/javascript" rel="nofollow" src="res/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" rel="nofollow" src="res/bootstrap.min.js"></script>
-    <script defer async id="rrbayJs" src="/canyou/js/wza.min.js"></script>
-    <!-- 引入js -->
-    <script type="text/javascript">
-        function ShowDetail() {
-            if (window.top.document.getElementById("rrbay_wzatool")) {
-                return false;
-            }
-            var url = "?url=" + document.location.href;
-            window.scrollTo(0, 0);
-            location_href('canyou/defaultbw.html' + url);
-        }
-        function location_href(url) { location.href = url }
-    </script>
-
+    <script id="rrbayJs" src="/canyou/js/wza.min.js?bw"></script>
 </body>
 </html>
